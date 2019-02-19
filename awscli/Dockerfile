@@ -1,5 +1,4 @@
-# NOTE: Make sure build caching is OFF, or Docker may not pick up the
-# latest version of the tools.
+# Docker container for AWS CLI.
 FROM python:3
 RUN apt-get update && apt-get install -y less zip unzip vim nano
 #RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
