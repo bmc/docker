@@ -6,4 +6,5 @@ Isolates the AWS command line tools in a Docker container.
 Use the `aws` command as usual. The alias ensures that it runs inside
 the container but mounts your home directory to the container.
 
-Using `install.sh` ensures that the container name matches the one
+Using `install.sh` ensures that the container name matches the one used by
+`aliases.sh`.
