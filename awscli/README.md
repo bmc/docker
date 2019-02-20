@@ -7,6 +7,3 @@ Use the `aws` command as usual. The alias ensures that it runs inside
 the container but mounts your home directory to the container.
 
 Using `install.sh` ensures that the container name matches the one
-
-**Note:** The Dockerfile is kind of specific to me. You might need to
-change the username ("bmc") to match your environment.

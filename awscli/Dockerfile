@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y less zip unzip vim nano
 #RUN unzip awscli-bundle.zip
 #RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 RUN pip install awscli
-RUN groupadd -g 1001 bmc
-RUN useradd -r -u 1001 -g bmc bmc
+RUN groupadd -g 1001 user
+RUN useradd -r -u 1001 -g user user
 RUN ln -s /home /Users
-USER bmc
+USER user
