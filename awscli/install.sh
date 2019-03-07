@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t awscli .
+docker build -t bclapper/awscli .
