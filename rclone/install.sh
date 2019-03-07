@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t rclone .
+docker build -t bclapper/rclone .

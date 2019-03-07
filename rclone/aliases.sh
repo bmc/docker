@@ -3,5 +3,5 @@ function rclone {
   # container ("user").
   docker_home=$(echo $HOME | sed -E -e "s|/$USER(/?)|/user\1|")
   docker_pwd=$(pwd | sed -E -e "s|/$USER(/?)|/user\1|")
-  docker run -it --rm -w $docker_pwd -v $HOME:$docker_home -e TERM=xterm rclone /usr/bin/rclone "$@"
+  docker run -it --rm -w $docker_pwd -v $HOME:$docker_home -e TERM=xterm bclapper/rclone /usr/bin/rclone "$@"
 }
