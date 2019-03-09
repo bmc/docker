@@ -1,8 +1,7 @@
 # Pandoc Docker file
 
-There are loads of [pandoc images][] in [Docker Hub][],
-but this one (not in Docker Hub) is mine. Having my own
-gives me a bit more control over a tool I use a _lot_.
+There are loads of [pandoc images][] in [Docker Hub][], but this one is
+mine. Having my own gives me a bit more control over a tool I use a _lot_.
 
 - `docker pull bclapper/pandoc`
 - Source `aliases.sh` in your `.bashrc` or `.zshrc`.
