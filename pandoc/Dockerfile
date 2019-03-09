@@ -18,6 +18,7 @@ RUN \
     virtualenv python-virtualenv \
     locales \
     plantuml \
+    pandoc-citeproc \
     curl && \
   rm -rf /var/lib/apt/lists/*
 
