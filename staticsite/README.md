@@ -1,6 +1,6 @@
 # Docker image for building static sites
 
-I often use `rake` and/or `jekyll` to build static sites. This image,
+I often use `rake` and `lessc` to build static sites. This image,
 `bclapper/staticsite`, defines a Docker container that includes all the
 stuff I typically use.
 
