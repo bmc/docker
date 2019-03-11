@@ -17,5 +17,6 @@ function drake {
          -v "$HOME:$HOME" \
          -v "$HOME/.ssh:/root/.ssh" \
          -v "`pwd`/.gems:/root/.gem" \
+         -p 4000:4000 \
          bclapper/staticsite $cmd "$@"
 }
