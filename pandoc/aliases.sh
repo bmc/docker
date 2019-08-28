@@ -6,7 +6,7 @@ function pandoc {
   _pan_set_vars
   docker run -it --rm -w `pwd` -v $HOME:$HOME \
              -e TERM=xterm -e HOME=$docker_home -e USER=user \
-             bclapper/pandoc /usr/bin/pandoc "$@"
+             bclapper/pandoc:latest /usr/bin/pandoc "$@"
 }
 
 # Fire up bash in the container
@@ -15,5 +15,5 @@ function panbash {
   _pan_set_vars
   docker run -it --rm -w `pwd` -v $HOME:$HOME \
              -e TERM=xterm -e HOME=$docker_home -e USER=user \
-             bclapper/pandoc /bin/bash "$@"
+             bclapper/pandoc:latest /bin/bash "$@"
 }
