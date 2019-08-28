@@ -6,6 +6,8 @@
 #
 # where <tag> is "latest", "snapshot", whatever. Defaults to "latest".
 
+IMAGE=bclapper/awscli
+
 case "$#" in
   0)
     tag=latest
@@ -19,4 +21,5 @@ case "$#" in
     ;;
 esac
 
-docker build --no-cache -t bclapper/awscli:latest .
+set -x
+docker build --no-cache -t $IMAGE:$tag .
