@@ -1,7 +1,19 @@
-function pandoc {
-  # Change the current user in the HOME and pwd to the user inside the Docker
-  # container ("user").
+function _pan_set_vars {
   docker_home=$(echo $HOME | sed -E -e "s|/$USER(/?)|/user\1|")
-  docker_pwd=$(pwd | sed -E -e "s|/$USER(/?)|/user\1|")
-  docker run -it --rm -w $docker_pwd -v $HOME:$docker_home -e TERM=xterm bclapper/pandoc /usr/bin/pandoc "$@"
+}
+
+function pandoc {
+  _pan_set_vars
+  docker run -it --rm -w `pwd` -v $HOME:$HOME \
+             -e TERM=xterm -e HOME=$docker_home -e USER=user \
+             bclapper/pandoc /usr/bin/pandoc "$@"
+}
+
+# Fire up bash in the container
+function panbash {
+  set -x
+  _pan_set_vars
+  docker run -it --rm -w `pwd` -v $HOME:$HOME \
+             -e TERM=xterm -e HOME=$docker_home -e USER=user \
+             bclapper/pandoc /bin/bash "$@"
 }
