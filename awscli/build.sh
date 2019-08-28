@@ -19,4 +19,4 @@ case "$#" in
     ;;
 esac
 
-docker build --no-cache -t bclapper/staticsite:latest .
+docker build --no-cache -t bclapper/awscli:latest .
