@@ -1,13 +1,10 @@
-# Pandoc Docker file
+# Pandoc Docker aliases
 
-There are loads of [pandoc images][] in [Docker Hub][], but this one is
-mine. Having my own gives me a bit more control over a tool I use a _lot_.
+`aliases.sh` provides a shell (Zsh/Bash) alias that invokes Pandoc
+within the `pandoc/latex` Docker image. See 
+<https://github.com/pandoc/dockerfiles> for more information. Currently,
+the alias is wired to Pandoc version 2.9.
 
-- `docker pull bclapper/pandoc`
-- Source `aliases.sh` in your `.bashrc` or `.zshrc`.
-
-Use the `pandoc` command as usual. The alias ensures that it runs inside
-the container but mounts your home directory to the container.
-
-[pandoc images]: https://hub.docker.com/search?q=pandoc&type=image&sort=updated_at&order=desc
-[Docker hub]: https://hub.docker.com
+The alias in `aliases.sh` mounts the current working directory into the
+Docker image, in the manner described in the Pandoc `dockerfiles` repo's
+[README](https://github.com/pandoc/dockerfiles/blob/master/README.md).
