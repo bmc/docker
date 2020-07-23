@@ -5,3 +5,5 @@ pre-installed:
 - [jupyter-lab-go-to-definition](https://github.com/krassowski/jupyterlab-go-to-definition)
 - [jupyterlab-python-file](https://github.com/jtpio/jupyterlab-python-file)
 
+Note: You still have to enable the extension manager in JupyterLab before any
+extensions are active.
